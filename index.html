@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- fontawesome link -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+      <!-- fonts -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css">
+    <title>Music List</title>
+</head>
+<body>
+    <section class="container">
+        <div class="inner-content">
+            <h1><span> <i class="fas fa-music headphone"></i><i class="fas fa-music music"></i></span> <span>Music</span> List</h1>
+            <h3>Make Your Own Music List</h3>
+
+            <form id='music-form'>
+                <div class="form-div">
+                    <input type="text" id="title" required>
+                    <label for="title">Track Title</label>
+                </div>
+                <div class="form-div">
+                    <input type="text" id="singerName" required>
+                    <label for="singerName">Singer Name/ Album Name</label>
+                </div>
+                <div class="form-div">
+                    <input type="text" id="genre" required>
+                    <label for="genre">Music Genre</label>
+                </div>
+                <button type="submit" onclick="addMusic(event)">Add Music</button>
+            </form> 
+           <div class="table-div">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Track Title</th>
+                        <th>Singer/Album Name</th>
+                        <th>Music Genre</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="music-list">
+
+                </tbody>
+            </table>
+           </div>
+           
+        </div>
+    </section>
+<script src="app.js"></script>
+</body>
+</html>

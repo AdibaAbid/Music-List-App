@@ -1,0 +1,201 @@
+body{
+    background-color: #daeef6;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courgette', cursive;
+    color: #fff;
+}
+span{
+    color: #eb4d4b;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+display: grid;
+place-items: center;
+text-align: center;
+}
+h1{
+    font-size: 28px;
+    margin-top: 1rem;
+}
+h3{
+    text-align: center;
+    font-size: 13px;
+    color: #d42929;
+      
+}
+.headphone{
+    font-size: 20px;
+    position: absolute;
+    transform: rotate(4deg);
+    left: 575px;
+    color: #ff7675;
+    animation: musicAnimation1;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    transition: .5s;
+
+}
+@keyframes musicAnimation1{
+    0%{
+        color: rgb(245, 187, 168);
+    }
+    100%{
+        color: #d42929;
+    }
+}
+
+.fa-music{
+    margin-right: 12px;
+    color: #ff7675;
+   
+}
+.music{
+    animation: musicAnimation2;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    transition: .5s;
+}
+@keyframes musicAnimation2{
+    0%{
+        color: #d42929;
+        
+    }
+    100%{
+        
+        color: rgb(245, 187, 168);
+    }
+}
+
+.inner-content{
+    border-radius: 5px;
+    width: 60vw;
+    height: auto;
+    background-color: #74b9ff;
+    box-shadow: 9px 14px 19px -7px rgba(0,0,0,0.49);
+}
+.form-div{
+    margin-top: 2rem;
+    position: relative;
+}
+.form-div input{
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+    width: 60%;
+    color: #222;
+}
+.form-div label{
+    color: rgb(75, 75, 75);
+    position: absolute;
+    top: 9px;
+    left: 170px;
+    transition: 0.5s;
+}
+.form-div input:focus{
+    outline: none;
+}
+.form-div input:focus ~  label,
+.form-div input:valid ~ label{
+    top: -20px;
+    color: #222;
+}
+button{
+    margin-top: 1rem;
+    width: 60%;
+    padding: 8px 10px;
+    border: none;
+    background-color: #eb4d4b;
+    cursor: pointer; 
+    font-size: 18px;
+}
+button:focus{
+    outline: none;
+}
+.table-div{
+display: grid;
+place-items: center;
+}
+table{
+    border-collapse: collapse;
+    width: 60%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    
+}
+table th{
+    text-align: left;
+    background-color: #e76c51;
+
+}
+table th, table td{
+    border: 1px solid #ddd;
+    padding: 8px;
+    color: #222;
+}
+table tr:nth-child(even){
+    color: #222;
+    background-color: rgb(219, 216, 216);
+}
+
+table tr:hover {
+    background-color: rgb(218, 137, 137);
+}
+
+.danger{
+    background-color: #e84118;
+    padding: 8px 12px;
+    width: 60%;
+    margin-top: 5px;
+    display: inline-block;
+    width: 60%;
+    transition: .5s;
+}
+
+.success{
+    background-color:#6ab04c;
+    padding: 8px 12px;
+    width: 60%;
+    margin-top: 5px;
+    display: inline-block;
+    width: 60%;
+    transition: .5s;
+}
+.fa-trash-alt{
+    color: #eb4d4b;
+}
+@media screen and (max-width: 786px){
+    .form-div label{
+        left: 130px;
+    }
+    .headphone{
+        left: 286px;
+    }
+    table{
+        width: 95%;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .inner-content{
+        width: 80vw;
+    }
+}
+@media screen and (max-width: 480px){
+    .form-div label{
+        left: 65px;
+    }
+    .headphone{
+        left: 138px;
+    }
+    .form-div input{
+        width: 70%;
+    }
+    button{
+        width: 70%;
+    }
+}
