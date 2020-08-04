@@ -86,5 +86,5 @@ function showAlert(message, className){
     container.insertBefore(div, form)
     //vanish in 3seconds
     setTimeout(()=> document.querySelector(`.${className}`).remove(),
-    3000);
+    2000);
 }
